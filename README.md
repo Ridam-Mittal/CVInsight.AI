@@ -168,12 +168,8 @@ Resume-JD-Analyzer/
 └── ...
 ```
 
-## 📸 Screenshots
-
-(Add screenshots of the application here to showcase its features and UI)
 
 ## 🤝 Contributing
-
 Contributions are welcome! Please follow these steps:
 
 1.  Fork the repository.
@@ -182,16 +178,7 @@ Contributions are welcome! Please follow these steps:
 4.  Push your changes to your fork.
 5.  Submit a pull request to the main repository.
 
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## 📬 Contact
 
-If you have any questions or suggestions, feel free to contact me at [your-email@example.com](mailto:your-email@example.com).
-
-## 💖 Thanks
-
-Thank you for checking out this project! I hope it helps you improve your resume and land your dream job.
-
-This is written by [readme.ai](https://readme-generator-phi.vercel.app/).
+If you have any questions or suggestions, feel free to contact me at [ridam112004@gmail.com](mailto:ridam112004@gmail.com).
