@@ -24,7 +24,6 @@
     "react-dom": "^19.1.0",
     "react-hot-toast": "^2.5.2",
     "react-markdown": "^10.1.0",
-    "react-mde": "^11.5.0",
     "react-router-dom": "^7.7.0",
     "recharts": "^3.1.0",
     "showdown": "^2.1.0",
