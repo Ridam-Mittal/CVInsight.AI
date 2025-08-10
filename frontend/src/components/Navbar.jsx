@@ -13,7 +13,7 @@ export default function Navbar({ user }) {
 
   const handleLogout = async () => {
     try{
-      await axios.get('http://localhost:8000/api/auth/logout', {
+      await axios.get('https://resolve-ai-ug21.onrender.com/api/auth/logout', {
         withCredentials: true,
       });
       localStorage.removeItem('user');

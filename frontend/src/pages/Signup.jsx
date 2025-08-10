@@ -22,7 +22,7 @@ const handleSignup = async (e) => {
     setLoading(true);
 
     try {
-        const { data } = await axios.post('http://localhost:8000/api/auth/signup', {
+        const { data } = await axios.post('https://resolve-ai-ug21.onrender.com/api/auth/signup', {
         fullname: form.fullname.trim(),
         email: form.email.trim(),
         password: form.password.trim()

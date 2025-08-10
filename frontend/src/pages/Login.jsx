@@ -21,7 +21,7 @@ function Login() {
     setLoading(true);
 
     try {
-        const { data } = await axios.post('http://localhost:8000/api/auth/login', {
+        const { data } = await axios.post('https://resolve-ai-ug21.onrender.com/api/auth/login', {
         email: form.email.trim(),
         password: form.password.trim()
         }, { withCredentials: true });

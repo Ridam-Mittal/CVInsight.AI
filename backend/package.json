@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon -r dotenv/config --experimental-json-modules index.js",
-    "inngest-dev": "npx inngest-cli@latest dev --no-discovery -u http://localhost:8000/api/inngest"
+    "inngest-dev": "npx inngest-cli@latest dev --no-discovery -u https://resolve-ai-ug21.onrender.com/api/inngest"
   },
   "keywords": [],
   "author": "",

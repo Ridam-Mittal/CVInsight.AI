@@ -33,7 +33,7 @@ function Upload() {
       formData.append("resume", resume);
       formData.append("jd", jd);
 
-      const { data } = await axios.post("http://localhost:8000/api/analysis", formData, {
+      const { data } = await axios.post("https://resolve-ai-ug21.onrender.com/api/analysis", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

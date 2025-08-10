@@ -13,7 +13,7 @@ function AnalysisDetail() {
     useLayoutEffect(() => {
       const fetchdetail = async () => {
         try{
-          const {data} = await axios.post(`http://localhost:8000/api/analysis/single-history`, {
+          const {data} = await axios.post(`https://resolve-ai-ug21.onrender.com/api/analysis/single-history`, {
             historyId: id.trim()
           }, {
             withCredentials: true

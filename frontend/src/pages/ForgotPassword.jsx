@@ -16,7 +16,7 @@ function ForgotPassword() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/api/auth/forgotpassword",
+        "https://resolve-ai-ug21.onrender.com/api/auth/forgotpassword",
         { email: email.trim() },
         { withCredentials: true }
       );
@@ -37,7 +37,7 @@ function ForgotPassword() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/api/auth/reset-password",
+        "https://resolve-ai-ug21.onrender.com/api/auth/reset-password",
         {
           email: email.trim(),
           otp: otp.trim(),

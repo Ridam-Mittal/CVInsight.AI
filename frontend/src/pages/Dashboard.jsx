@@ -27,7 +27,7 @@ function Dashboard() {
   const fetchHistory = async () => {
       setLoading(true);
       try {
-        const { data } = await axios.get(`http://localhost:8000/api/analysis/history`, {
+        const { data } = await axios.get(`https://resolve-ai-ug21.onrender.com/api/analysis/history`, {
           withCredentials: true,
         });
         setHistory(data.history);
@@ -49,7 +49,7 @@ function Dashboard() {
 
     try {
       const { data } = await axios.post(
-        `http://localhost:8000/api/auth/edit-info`,
+        `https://resolve-ai-ug21.onrender.com/api/auth/edit-info`,
         {
           fullname: fullname.trim(),
           email: email.trim(),
@@ -74,7 +74,7 @@ function Dashboard() {
   const deleteAnalysis = async (id) => {
     setDeleteLoading(true);
     try{
-        await axios.post(`http://localhost:8000/api/analysis/delete-analysis`, {
+        await axios.post(`https://resolve-ai-ug21.onrender.com/api/analysis/delete-analysis`, {
            analysisId: id 
         }, { withCredentials: true });
 

@@ -14,7 +14,7 @@ function CheckAuth({ children, protectedRoute }) {
 
   const verify = async () => {
     try {
-      const { data } = await axios.get('http://localhost:8000/api/auth/verify', {
+      const { data } = await axios.get('https://resolve-ai-ug21.onrender.com/api/auth/verify', {
         withCredentials: true,
       });
 
