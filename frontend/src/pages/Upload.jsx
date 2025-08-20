@@ -33,7 +33,7 @@ function Upload() {
       formData.append("resume", resume);
       formData.append("jd", jd);
 
-      const { data } = await axios.post("https://resolve-ai-ug21.onrender.com/api/analysis", formData, {
+      const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/analysis`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -41,7 +41,7 @@ function Upload() {
       });
 
       setAnalysis(data.analysis); // save structured result to state
-      toast.success("Analysis successful. Sending on Mail");
+      toast.success("Analysis successful. Results will be emailed to you");
     } catch (error) {
       console.error("Analysis failed:", error.response?.data || error.message);
       toast.error(error.response?.data?.error);

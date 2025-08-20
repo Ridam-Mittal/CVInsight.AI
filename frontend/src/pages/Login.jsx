@@ -21,7 +21,7 @@ function Login() {
     setLoading(true);
 
     try {
-        const { data } = await axios.post('https://resolve-ai-ug21.onrender.com/api/auth/login', {
+        const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/login`, {
         email: form.email.trim(),
         password: form.password.trim()
         }, { withCredentials: true });
@@ -42,13 +42,13 @@ function Login() {
 
   return (
     <>
-      <main className="flex flex-col py-10 px-6 max-w-5xl mx-auto my-40 mb-50 bg-[#756d6d27] border border-[#383942] w-[25%] rounded-2xl">
+      <main className="flex flex-grow flex-col py-10 px-6 max-w-5xl mx-auto bg-[#756d6d27] border border-[#383942] w-[25%] rounded-2xl my-20">
         <form
           onSubmit={handleLogin}
           autoComplete="off"
           className="flex flex-col items-center gap-5 w-[100%]"
         >
-          <h2 className="text-2xl font-semibold text-gray-100 ">LOG IN</h2>
+          <h2 className="text-xl font-semibold text-gray-100 ">LOG IN</h2>
 
           <input
             type="email"
@@ -84,13 +84,13 @@ function Login() {
             </button>
           </div>
         </form>
-        <h4 className="text-lg text-gray-300 text-center mt-2">
+        <h4 className="text-md text-gray-300 text-center mt-2">
         Don't have an account?{" "}
         <Link to="/signup" className="text-green-600 hover:underline font-medium">
             Signup
         </Link>
         </h4>
-        <h4 className="text-lg text-gray-300 text-center mt-2">
+        <h4 className="text-md text-gray-300 text-center mt-2">
         Forgot Password ?{" "}
         <Link to="/forgot-password" className="text-green-600 hover:underline font-medium">
             Click Here

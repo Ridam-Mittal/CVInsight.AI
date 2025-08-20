@@ -15,26 +15,26 @@ function App() {
   return (
     <>
       {/* Hero Section */}
-      <main className="flex flex-col items-center justify-center text-center py-30 px-4 max-w-6xl mx-auto ">
+      <main className="flex flex-col items-center justify-center text-center py-30 px-4 max-w-5xl mx-auto ">
         <span className="inline-flex items-center bg-[#1a1c22] px-4 py-1 rounded-full text-white font-semibold text-md shadow border border-[#23242a]">
         <span className="mr-2 text-xl">🚀</span>
           AI-Powered Document Intelligence
         </span>
-        <h1 className="text-7xl md:text-6xl font-bold mb-6 leading-tight text-gray-300 mt-6">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-300 mt-6">
           Compare Resumes with JDs Using AI Precision 🎯
         </h1>
-        <p className="max-w-4xl text-2xl text-gray-400 mb-10 mt-5 leading-relaxed">
+        <p className="max-w-4xl text-lg text-gray-400 mb-10 mt-5 leading-relaxed">
           Upload your resume and job description to unlock insights. Get match scores, skill analysis, and smart suggestions to boost your job success with advanced AI.
         </p>
         <div className="flex gap-4 mb-12">
           <Link
-            className="px-6 py-3 bg-gray-700 hover:bg-gray-800 text-white rounded-lg text-xl font-semibold shadow"
+            className="px-6 py-3 bg-gray-700 hover:bg-gray-800 text-white rounded-lg text-md font-semibold shadow"
             to={user ? `/upload`: `/login`}
           >
             Upload Resume & JD →
           </Link>
           <Link
-            className="px-6 py-3 bg-[#1a1c22] hover:bg-[#2a2b31] text-[#f4f5f7] border border-[#2a2b31] rounded-lg text-xl font-semibold"
+            className="px-6 py-3 bg-[#1a1c22] hover:bg-[#2a2b31] text-[#f4f5f7] border border-[#2a2b31] rounded-lg text-md font-semibold"
             to={user ? `/dashboard`: `/login`}
           >
             Dashboard

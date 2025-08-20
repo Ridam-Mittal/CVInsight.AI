@@ -13,7 +13,7 @@ export default function Navbar({ user }) {
 
   const handleLogout = async () => {
     try{
-      await axios.get('https://resolve-ai-ug21.onrender.com/api/auth/logout', {
+      await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/logout`, {
         withCredentials: true,
       });
       localStorage.removeItem('user');
@@ -69,25 +69,25 @@ export default function Navbar({ user }) {
         ): (
             <>
             <Link
-            className="text-lg px-4 py-1 bg-[#0e0f11] border-gray-600 border rounded cursor-pointer font-semibold hover:bg-[#dcdce1] hover:text-gray-900"
+            className="text-md px-4 py-1 bg-[#0e0f11] border-gray-600 border rounded cursor-pointer font-semibold hover:bg-[#dcdce1] hover:text-gray-900"
             to='/'
             >   
                 Home
             </Link>
             <Link
-            className="text-lg px-4 py-1 bg-[#0e0f11] border-gray-600 border rounded cursor-pointer font-semibold hover:bg-[#dcdce1] hover:text-gray-900"
+            className="text-md px-4 py-1 bg-[#0e0f11] border-gray-600 border rounded cursor-pointer font-semibold hover:bg-[#dcdce1] hover:text-gray-900"
             to='/upload'
             >   
               Upload
             </Link>
             <Link
-            className="text-2xl px-4 py-1 border-gray-600 border rounded cursor-pointer font-semibold hover:bg-[#dcdce1] hover:text-gray-900"
+            className="text-xs px-3 py-1 border-gray-600 border rounded cursor-pointer font-semibold hover:bg-[#dcdce1] hover:text-gray-900"
             to='/dashboard'
             >   
                 <FontAwesomeIcon icon={faUser} style={{fontSize: '25px'}}/>
             </Link>
             <button
-            className="text-lg px-4 py-1 bg-[#0e0f11] border-gray-600 border rounded cursor-pointer font-semibold hover:bg-[#dcdce1] hover:text-gray-900"
+            className="text-md px-4 py-1 bg-[#0e0f11] border-gray-600 border rounded cursor-pointer font-semibold hover:bg-[#dcdce1] hover:text-gray-900"
             onClick={handleLogout}
             >   
               Logout

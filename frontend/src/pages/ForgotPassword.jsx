@@ -16,7 +16,7 @@ function ForgotPassword() {
 
     try {
       const { data } = await axios.post(
-        "https://resolve-ai-ug21.onrender.com/api/auth/forgotpassword",
+        `${import.meta.env.VITE_BACKEND_URL}/api/auth/forgotpassword`,
         { email: email.trim() },
         { withCredentials: true }
       );
@@ -37,7 +37,7 @@ function ForgotPassword() {
 
     try {
       const { data } = await axios.post(
-        "https://resolve-ai-ug21.onrender.com/api/auth/reset-password",
+        `${import.meta.env.VITE_BACKEND_URL}/api/auth/reset-password`,
         {
           email: email.trim(),
           otp: otp.trim(),
@@ -61,12 +61,12 @@ function ForgotPassword() {
   };
 
   return (
-    <main className="flex flex-col py-10 px-6 max-w-5xl mx-auto my-50 bg-[#756d6d27] border border-[#383942] w-[25%] rounded-2xl mb-85">
+    <main className="flex flex-grow flex-col py-10 px-6 max-w-5xl mx-auto bg-[#756d6d27] border border-[#383942] w-[25%] rounded-2xl my-40">
       <form
         onSubmit={otpSent ? handleResetPassword : handleForgotPassword}
         className="flex flex-col items-center gap-5 w-full"
       >
-        <h2 className="text-2xl font-semibold text-gray-100">
+        <h2 className="text-xl font-semibold text-gray-100">
           {otpSent ? "Reset Password" : "Forgot Password"}
         </h2>
 
@@ -118,7 +118,7 @@ function ForgotPassword() {
           )}
         </button>
       </form>
-         <h4 className="text-lg text-gray-300 text-center mt-2">
+         <h4 className="text-md text-gray-300 text-center mt-2">
             Retry ? {" "}
             <button to="/forgot-password" className="text-green-600 hover:underline font-medium"
             onClick={() => setOtpSent(false)}>

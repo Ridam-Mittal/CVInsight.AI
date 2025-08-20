@@ -22,7 +22,7 @@ const handleSignup = async (e) => {
     setLoading(true);
 
     try {
-        const { data } = await axios.post('https://resolve-ai-ug21.onrender.com/api/auth/signup', {
+        const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/signup`, {
         fullname: form.fullname.trim(),
         email: form.email.trim(),
         password: form.password.trim()
@@ -49,13 +49,13 @@ const handleSignup = async (e) => {
 
   return (
     <>
-      <main className="flex flex-col py-10 px-6 max-w-5xl mx-auto my-40 mb-50 bg-[#756d6d27] border border-[#383942] w-[25%] rounded-2xl">
+      <main className="flex flex-col py-10 px-6 max-w-5xl mx-auto flex-grow my-20 bg-[#756d6d27] border border-[#383942] w-[25%] rounded-2xl">
         <form
           onSubmit={handleSignup}
           autoComplete="off"
           className="flex flex-col items-center gap-5 w-[100%]"
         >
-          <h2 className="text-2xl font-semibold text-gray-100">SIGN UP</h2>
+          <h2 className="text-xl font-semibold text-gray-100">SIGN UP</h2>
 
           <input
             type="text"
@@ -101,7 +101,7 @@ const handleSignup = async (e) => {
             </button>
           </div>
 
-          <h4 className="text-lg text-gray-300 text-center">
+          <h4 className="text-md text-gray-300 text-center">
             Already have an account?{" "}
             <Link to="/login" className="text-green-600 hover:underline font-medium">
               Login

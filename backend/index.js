@@ -15,9 +15,10 @@ import { OnRequestOtp } from './inngest/functions/on-otp-request.js';
 const app = express();
 
 app.use(cors({
-  origin: 'https://resolve-ai-nine.vercel.app', 
+  origin: process.env.FRONTEND_URL, 
   credentials: true,
 }));
+
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
