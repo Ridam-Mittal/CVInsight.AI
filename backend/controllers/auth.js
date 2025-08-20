@@ -44,8 +44,8 @@ export const signup = async (req, res) => {
 
         const options = {
             httpOnly: true,
-            secure: false,         // true in prod
-            sameSite: 'Lax',       // 'None' in prod with HTTPS
+            secure: true,
+            sameSite: 'None',       // 'None' in prod with HTTPS
             expires: new Date(Date.now() + 86400000), // 1 day
         };
 
@@ -94,8 +94,8 @@ export const login = async (req, res) => {
 
         const options = {
             httpOnly: true,
-            secure: false,         // true in prod
-            sameSite: 'Lax',       // 'None' in prod with HTTPS
+            secure: true,
+            sameSite: 'None',       // 'None' in prod with HTTPS
             expires: new Date(Date.now() + 86400000), // 1 day
         };
         res.cookie("token", token, options);
