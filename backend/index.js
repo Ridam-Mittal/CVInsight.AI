@@ -15,7 +15,7 @@ import { OnRequestOtp } from './inngest/functions/on-otp-request.js';
 const app = express();
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL, 
+  origin: '*', 
   credentials: true,
 }));
 
@@ -28,8 +28,9 @@ const PORT = process.env.PORT || 8000;
 
 app.use('/api/analysis', analysisRoute);
 app.use('/api/auth', authRoute);
-
-
+app.get('/test', (req, res) => {
+    res.send("Test endpoint");
+});
 
 app.use(
     "/api/inngest",
