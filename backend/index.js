@@ -14,6 +14,8 @@ import { OnRequestOtp } from './inngest/functions/on-otp-request.js';
 
 const app = express();
 
+
+
 app.use(cors({
   origin: '*', 
   credentials: true,
@@ -32,6 +34,12 @@ app.get('/test', (req, res) => {
     res.send("Test endpoint");
 });
 
+
+app.use('/api/inngest', (req, res, next) => {
+  console.log('Inngest request origin:', req.headers.origin);
+  next();
+});
+
 app.use(
     "/api/inngest",
     serve({
@@ -39,6 +47,7 @@ app.use(
         functions: [OnRequestMail, OnRequestOtp] 
     }),
 )
+
 
 
 ConnectDB()
