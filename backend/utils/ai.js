@@ -4,7 +4,7 @@
 const AIProcess = async ({ resumeText, jobDescription }) => {
   const resumeMatchAgent = createAgent({
     model: gemini({
-      model: 'gemini-1.5-flash',
+      model: 'gemini-2.5-flash',
       apiKey: process.env.GEMINI_API_KEY
     }),
     name: "Resume Analyzer AI Assistant",
